@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Zap, Heart, Droplets } from "lucide-react";
 import type { Easing } from "framer-motion";
-import Layout from "@/components/Layout";
+
 import flatlay from "@/assets/product-scrubs-flatlay.jpg";
 import fabricTexture from "@/assets/fabric-texture.jpg";
 import customTeam from "@/assets/custom-team.jpg";
@@ -32,11 +32,11 @@ const categories = [
 
 const Index = () => {
   return (
-    <Layout>
+    <>
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/HeroImage.png" alt="Healthcare professional in Dilo scrubs" className="w-full h-full object-cover object-top" loading="eager" />
+          <img src="/HeroImage.png" alt="Healthcare professional in Dilo scrubs" className="w-full h-full object-cover object-[75%_center] md:object-top" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/70 via-foreground/40 to-transparent" />
         </div>
         <div className="relative container mx-auto px-4 lg:px-8">
@@ -232,7 +232,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 };
 

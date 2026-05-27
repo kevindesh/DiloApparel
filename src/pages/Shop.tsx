@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Palette } from "lucide-react";
 import { Link } from "react-router-dom";
-import Layout from "@/components/Layout";
+
 
 const products = [
   { id: 9, name: "Cozy Crewneck", price: 40, color: "Navy", category: "Crewnecks", image: "/Home Page Images/product_front_transparent.png", desc: "Comfortable crewneck perfect for casual wear. Fully customizable with your own design." },
@@ -24,7 +24,7 @@ const Shop = () => {
   const filtered = active === "All" ? products : products.filter((p) => p.category === active);
 
   return (
-    <Layout>
+    
       <section className="py-12 lg:py-20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
@@ -86,7 +86,7 @@ const Shop = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    
   );
 };
 

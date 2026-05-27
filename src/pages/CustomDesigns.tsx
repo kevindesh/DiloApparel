@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Palette, Users, MessageSquare, Send } from "lucide-react";
-import Layout from "@/components/Layout";
+
 import { Link } from "react-router-dom";
 import customTeam from "@/assets/custom-team.jpg";
 import flatlay from "@/assets/product-scrubs-flatlay.jpg";
@@ -22,7 +22,8 @@ const options = [
 
 const CustomDesigns = () => {
   return (
-    <Layout>
+<>
+    
       {/* Hero */}
       <section className="relative py-28 lg:py-36 overflow-hidden">
         <div className="absolute inset-0">
@@ -105,8 +106,10 @@ const CustomDesigns = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    
+  
+</>
+);
 };
 
 export default CustomDesigns;

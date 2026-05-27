@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
-import Layout from "@/components/Layout";
+
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -12,24 +12,22 @@ const Contact = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    // Using FormSubmit to send email to the requested address
-    const scriptUrl = "https://formsubmit.co/ajax/ddranasinghe@yahoo.ca"; 
+    // Google Apps Script Web App URL
+    const scriptUrl = "https://script.google.com/macros/s/AKfycbzXBsWA8ixvWUv5ljBWwiBSZ_0gHremTcqqQWtucN8osJrHhkiinFc3YRI3M3_lfBv0/exec"; 
 
     try {
       const formData = new FormData(e.currentTarget);
       
-      // Add hidden fields for FormSubmit
-      formData.append("_subject", subject);
-      formData.append("_captcha", "false");
-      
+      // Google Apps Script requires 'no-cors' to avoid CORS policy blocks 
+      // when calling from a web browser.
       await fetch(scriptUrl, {
         method: "POST",
-        headers: {
-          'Accept': 'application/json'
-        },
+        mode: "no-cors",
         body: formData
       });
-
+      
+      // with no-cors we can't read the JSON response directly, so we 
+      // assume success if the fetch completes without a network error.
       setSubmitted(true);
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -40,7 +38,7 @@ const Contact = () => {
   };
 
   return (
-    <Layout>
+    
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-14">
@@ -176,7 +174,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    
   );
 };
 
