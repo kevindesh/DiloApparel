@@ -13,7 +13,7 @@ const Contact = () => {
     setIsLoading(true);
 
     // Google Apps Script Web App URL
-    const scriptUrl = "https://script.google.com/macros/s/AKfycbzXBsWA8ixvWUv5ljBWwiBSZ_0gHremTcqqQWtucN8osJrHhkiinFc3YRI3M3_lfBv0/exec"; 
+    const scriptUrl = "https://script.google.com/macros/s/AKfycbz2tw8ZkyhTOj3NnRX5SyM0CG_Bjl3Rw4iWI8dZdCIo12TkuvavAvOAOJbr_KrZbtdAcA/exec"; 
 
     try {
       const formData = new FormData(e.currentTarget);
