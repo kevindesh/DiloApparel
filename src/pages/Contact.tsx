@@ -12,22 +12,24 @@ const Contact = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    // Google Apps Script Web App URL
-    const scriptUrl = "https://script.google.com/macros/s/AKfycbzXBsWA8ixvWUv5ljBWwiBSZ_0gHremTcqqQWtucN8osJrHhkiinFc3YRI3M3_lfBv0/exec"; 
+    // Using FormSubmit to send email to the requested address
+    const scriptUrl = "https://formsubmit.co/ajax/ddranasinghe@yahoo.ca"; 
 
     try {
       const formData = new FormData(e.currentTarget);
       
-      // Google Apps Script requires 'no-cors' to avoid CORS policy blocks 
-      // when calling from a web browser.
+      // Add hidden fields for FormSubmit
+      formData.append("_subject", subject);
+      formData.append("_captcha", "false");
+      
       await fetch(scriptUrl, {
         method: "POST",
-        mode: "no-cors",
+        headers: {
+          'Accept': 'application/json'
+        },
         body: formData
       });
-      
-      // with no-cors we can't read the JSON response directly, so we 
-      // assume success if the fetch completes without a network error.
+
       setSubmitted(true);
     } catch (error) {
       console.error("Error submitting form:", error);

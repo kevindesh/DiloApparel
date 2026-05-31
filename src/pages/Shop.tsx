@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 
 
 const products = [
-  { id: 9, name: "Cozy Crewneck", price: 40, color: "Navy", category: "Crewnecks", image: "/Home Page Images/product_front_transparent.png", desc: "Comfortable crewneck perfect for casual wear. Fully customizable with your own design." },
-  { id: 10, name: "Cardigan Sweater", price: 45, color: "Gray", category: "Cardigans", image: "/Home Page Images/CardiganFrontTrans.png", desc: "Versatile cardigan for layering. Customize colors and add your personal touch." },
-  { id: 11, name: "Zip Up Sweater", price: 45, color: "Sage", category: "Zip Up Sweaters", image: "/Home Page Images/ZipperFrontTrans.png", desc: "Cozy zip-up sweater for everyday comfort. Make it uniquely yours with customization." },
-  { id: 13, name: "Performance Tee", price: 28, color: "White", category: "Dry Fit T-Shirts", image: "/TshirtRealTrans.png", desc: "Breathable dry fit tee for active days. Customize with colors, logos, or designs." },
+  { id: 9, name: "Cozy Crewneck", price: 45, color: "Navy", category: "Crewnecks", image: "/Home Page Images/product_front_transparent.png", desc: "Comfortable crewneck perfect for casual wear. Fully customizable with your own design." },
+  { id: 10, name: "Cardigan Sweater", price: 50, color: "Gray", category: "Cardigans", image: "/Home Page Images/CardiganFrontTrans.png", desc: "Versatile cardigan for layering. Customize colors and add your personal touch." },
+  { id: 11, name: "Zip Up Sweater", price: 50, color: "Sage", category: "Zip Up Sweaters", image: "/Home Page Images/ZipperFrontTrans.png", desc: "Cozy zip-up sweater for everyday comfort. Make it uniquely yours with customization." },
+  { id: 13, name: "Performance Tee", price: 33, color: "White", category: "Dry Fit T-Shirts", image: "/TshirtRealTrans.png", desc: "Breathable dry fit tee for active days. Customize with colors, logos, or designs." },
 ];
 
 const filters = [
